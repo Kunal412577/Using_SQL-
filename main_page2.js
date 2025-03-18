@@ -163,6 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update Cart UI
     function updateCartUI() {
         cartItemsContainer.innerHTML = ""; // Clear the cart container
+    
         cart.forEach((item, index) => {
             const cartItem = document.createElement("div");
             cartItem.classList.add("cart-item");
@@ -189,8 +190,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             details += `<p><strong>Quantity:</strong> ${item.quantity}</p>`;
-            details += `<p><strong>Price:</strong> ${item.price}</p>`;
-    
+            details += `<p><strong>Price:</strong> ₹${(item.price * item.quantity).toFixed(2)}</p>`; // Dynamic total price for this item
+        
             // Add the dynamically built details to the cart item
             cartItem.innerHTML = `
                 <div>
@@ -198,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <button class="remove-from-cart" data-index="${index}">Remove</button>
             `;
-    
+        
             cartItemsContainer.appendChild(cartItem);
         });
     
@@ -215,8 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         updateCartCount(); // Update the cart count indicator
     }
-    
-
+        
     // Function to update cart counter
     function updateCartCount() {
         let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
