@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main_page.css">
+    <script src="main_page.js" defer></script>
+    <script src="main_page2.js" defer></script>
+    <script type="module" src="main_page3.js"></script>
+    <title>NESCAFÉ | Coffee Shop</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">NESCAFÉ</div>
+            <div class="nav-links">
+                <a href="./login_page.html" id="loginLink">Login</a>
+                <a href="./sign_up.html" id="signuplink">Sign up</a>
+                <a href="#blog">Blog</a>
+                <a href="#" class="cart-toggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span> <!-- Added span -->
+                </a>
+                <a href="#" id="profileIcon">
+                    <i class="fas fa-user"></i>
+                    <span id="userEmailTooltip" class="tooltip"></span>
+                </a>
+                <a href="#" id="logoutLink" style="display: none;">Logout</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content fade-up">
+            <h1>Discover Premium Coffee</h1>
+            <p>Experience the perfect blend of tradition and taste</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2 class="section-title fade-up">Our Collection</h2>
+        
+        <div class="products-grid">
+            <!-- Coffee Product Examples -->
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="coff.jpg" alt="NESCAFÉ Gold Blend">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">NESCAFÉ Gold Blend</h3>
+                    <p class="product-description">Premium instant coffee with a rich, smooth taste</p>
+                    <!-- Inside each product card, before the 'Add to Cart' button -->
+<button class="customize-btn">Customize</button>
+
+<!-- Bottom-up sliding panel -->
+<div class="customization-panel">
+    <div class="customization-content">
+        <button class="close-panel">&times;</button>
+        <h3>Customize Your Coffee</h3>
+
+        <label>Size:
+            <select id="custom-size" class="product-size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </label>
+
+        <label>Sugar:
+            <select id="custom-sugar" class="product-sugar">
+                <option value="No Sugar">No Sugar</option>
+                <option value="1 tsp">1 tsp</option>
+                <option value="2 tsp">2 tsp</option>
+            </select>
+        </label>
+
+        <label>Type of Milk:
+            <select id="custom-milk" class="product-milk">
+                <option value="Regular Milk">Regular Milk</option>
+                <option value="Skim Milk">Skim Milk</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Oat Milk">Oat Milk</option>
+            </select>
+        </label>
+
+        <label>Extra Toppings:
+            <input type="text" id="custom-toppings" placeholder="Enter toppings">
+        </label>
+
+        <button class="save-customization">Save</button>
+    </div>
+</div>
+
+                    <div class="quantity-selector">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <p class="product-price">$180/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="coff.jpg" alt="NESCAFÉ Classic">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">NESCAFÉ Classic</h3>
+                    <p class="product-description">Instant coffee with a bold, full-bodied flavor</p>
+                    <button class="customize-btn">Customize</button>
+
+<!-- Bottom-up sliding panel -->
+<div class="customization-panel">
+    <div class="customization-content">
+        <button class="close-panel">&times;</button>
+        <h3>Customize Your Coffee</h3>
+
+        <label>Size:
+            <select id="custom-size" class="product-size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </label>
+
+        <label>Sugar:
+            <select id="custom-sugar" class="product-sugar">
+                <option value="No Sugar">No Sugar</option>
+                <option value="1 tsp">1 tsp</option>
+                <option value="2 tsp">2 tsp</option>
+            </select>
+        </label>
+
+        <label>Type of Milk:
+            <select id="custom-milk" class="product-milk">
+                <option value="Regular Milk">Regular Milk</option>
+                <option value="Skim Milk">Skim Milk</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Oat Milk">Oat Milk</option>
+            </select>
+        </label>
+
+        <label>Extra Toppings:
+            <input type="text" id="custom-toppings" placeholder="Enter toppings">
+        </label>
+
+        <button class="save-customization">Save</button>
+    </div>
+</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <p class="product-price">₹150/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="coffee_image_3.jpg" alt="NESCAFÉ Decaf">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">NESCAFÉ Decaf</h3>
+                    <p class="product-description">Decaffeinated coffee for a smooth, relaxing taste</p>
+                    <button class="customize-btn">Customize</button>
+
+<!-- Bottom-up sliding panel -->
+<div class="customization-panel">
+    <div class="customization-content">
+        <button class="close-panel">&times;</button>
+        <h3>Customize Your Coffee</h3>
+
+        <label>Size:
+            <select id="custom-size" class="product-size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </label>
+
+        <label>Sugar:
+            <select id="custom-sugar" class="product-sugar">
+                <option value="No Sugar">No Sugar</option>
+                <option value="1 tsp">1 tsp</option>
+                <option value="2 tsp">2 tsp</option>
+            </select>
+        </label>
+
+        <label>Type of Milk:
+            <select id="custom-milk" class="product-milk">
+                <option value="Regular Milk">Regular Milk</option>
+                <option value="Skim Milk">Skim Milk</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Oat Milk">Oat Milk</option>
+            </select>
+        </label>
+
+        <label>Extra Toppings:
+            <input type="text" id="custom-toppings" placeholder="Enter toppings">
+        </label>
+
+        <button class="save-customization">Save</button>
+    </div>
+</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <p class="product-price">₹170/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="coffee_image_4.jpg" alt="NESCAFÉ Latte">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">NESCAFÉ Latte</h3>
+                    <p class="product-description">A creamy latte with a perfect blend of coffee and milk</p>
+                    <button class="customize-btn">Customize</button>
+
+<!-- Bottom-up sliding panel -->
+<div class="customization-panel">
+    <div class="customization-content">
+        <button class="close-panel">&times;</button>
+        <h3>Customize Your Coffee</h3>
+
+        <label>Size:
+            <select id="custom-size" class="product-size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </label>
+
+        <label>Sugar:
+            <select id="custom-sugar" class="product-sugar">
+                <option value="No Sugar">No Sugar</option>
+                <option value="1 tsp">1 tsp</option>
+                <option value="2 tsp">2 tsp</option>
+            </select>
+        </label>
+
+        <label>Type of Milk:
+            <select id="custom-milk" class="product-milk">
+                <option value="Regular Milk">Regular Milk</option>
+                <option value="Skim Milk">Skim Milk</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Oat Milk">Oat Milk</option>
+            </select>
+        </label>
+
+        <label>Extra Toppings:
+            <input type="text" id="custom-toppings" placeholder="Enter toppings">
+        </label>
+
+        <button class="save-customization">Save</button>
+    </div>
+</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <p class="product-price">₹200/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="coffee_image_5.jpg" alt="NESCAFÉ Mocha">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">NESCAFÉ Mocha</h3>
+                    <p class="product-description">A rich coffee with a hint of chocolate</p>
+                    <button class="customize-btn">Customize</button>
+
+<!-- Bottom-up sliding panel -->
+<div class="customization-panel">
+    <div class="customization-content">
+        <button class="close-panel">&times;</button>
+        <h3>Customize Your Coffee</h3>
+
+        <label>Size:
+            <select id="custom-size" class="product-size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </label>
+
+        <label>Sugar:
+            <select id="custom-sugar" class="product-sugar">
+                <option value="No Sugar">No Sugar</option>
+                <option value="1 tsp">1 tsp</option>
+                <option value="2 tsp">2 tsp</option>
+            </select>
+        </label>
+
+        <label>Type of Milk:
+            <select id="custom-milk" class="product-milk">
+                <option value="Regular Milk">Regular Milk</option>
+                <option value="Skim Milk">Skim Milk</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Oat Milk">Oat Milk</option>
+            </select>
+        </label>
+
+        <label>Extra Toppings:
+            <input type="text" id="custom-toppings" placeholder="Enter toppings">
+        </label>
+
+        <button class="save-customization">Save</button>
+    </div>
+</div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <p class="product-price">₹210/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Snack Product Examples -->
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="snack_image_1.jpg" alt="Croissant">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Croissant</h3>
+                    <p class="product-description">Freshly baked buttery croissant</p>
+                    <p class="product-price">₹50/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="snack_image_2.jpg" alt="Cookies">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Cookies</h3>
+                    <p class="product-description">Delicious chocolate chip cookies</p>
+                    <p class="product-price">₹60/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="snack_image_3.jpg" alt="Muffin">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Muffin</h3>
+                    <p class="product-description">Fresh and soft blueberry muffin</p>
+                    <p class="product-price">₹55/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="snack_image_4.jpg" alt="Sandwich">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sandwich</h3>
+                    <p class="product-description">A fresh, hearty sandwich with cheese and veggies</p>
+                    <p class="product-price">₹90/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card fade-up">
+                <div class="product-image">
+                    <img src="snack_image_5.jpg" alt="Bagel">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bagel</h3>
+                    <p class="product-description">Toasted bagel with cream cheese</p>
+                    <p class="product-price">₹80/-</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <button class="cart-close"><i class="fas fa-times"></i></button>
+        <h3>Your Cart</h3>
+        <div class="cart-items"></div>
+        <button class="checkout-btn" type="button">Checkout</button>
+    </div>
+</body>
+</html>
