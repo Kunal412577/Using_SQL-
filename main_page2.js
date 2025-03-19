@@ -227,5 +227,8 @@ document.addEventListener("DOMContentLoaded", () => {
             cartCountElement.style.visibility = "hidden"; // Hide count
         }
     }
-    
+    document.getElementById("checkout-btn").addEventListener("click", function () {
+        localStorage.setItem("cart", JSON.stringify(cart)); // Save cart to localStorage
+        window.location.href = "checkout.html"; // Redirect to checkout
+    });
 });
