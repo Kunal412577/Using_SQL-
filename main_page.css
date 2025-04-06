@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -344,7 +345,7 @@ body {
     color: var(--cream);
 }
 
-.cart-sidebar .checkout-btn {
+.cart-sidebar #checkout-btn {
     background-color: var(--light-brown);
     color: var(--white);
     padding: 12px;
@@ -355,7 +356,7 @@ body {
     transition: 0.3s;
 }
 
-.cart-sidebar .checkout-btn:hover {
+.cart-sidebar #checkout-btn:hover {
     background-color: var(--brown);
 }
 
@@ -555,4 +556,35 @@ body {
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 16px 16px;
+}
+
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    width: 300px;
+}
+
+.popup-content p {
+    margin-bottom: 15px;
+}
+
+#popupClose {
+    background: #ff4747;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#popupClose:hover {
+    background: #cc0000;
 }
