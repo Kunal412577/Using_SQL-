@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - NESCAFÉ</title>
+    <link rel="stylesheet" href="checkout.css">
+    <script src="checkout.js" defer></script>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <div class="cart-items"></div>
+            <p>Subtotal: <span id="subtotal">0/-</span></p>
+            <p>CGST (9%): <span id="cgst">0/-</span></p>
+            <p>SGST (9%): <span id="sgst">0/-</span></p>
+            <p>Grand Total: <span id="grand-total">0/-</span></p>
+
+            <!-- Single Cash Given Input -->
+            <!-- <label for="cashGiven">Cash Given:</label>
+            <input type="number" id="cashGiven" placeholder="Enter amount" min="0"> -->
+
+            <!-- Single Change Returned Display -->
+            <!-- <p><strong>Change Returned:</strong> <span id="changeReturned">0</span>/-</p> -->
+
+            <!-- Single Confirm Payment Button -->
+            <button id="confirm-payment">Confirm Payment</button>
+        </div>
+    </div>
+</body>
+</html>
